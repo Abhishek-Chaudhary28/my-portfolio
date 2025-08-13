@@ -6,7 +6,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
-
+import { Link } from "react-router-dom";
 import type { Route } from "./+types/root";
 import "./app.css";
 
@@ -33,7 +33,22 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        {/* ✅ Global Navigation Bar */}
+        <nav className="flex justify-between items-center p-6 bg-white shadow-md">
+          {/* Left side: brand/name */}
+          <span className="text-2xl font-semibold">Abhishek Chaudhary</span>
+
+          {/* Right side: links */}
+          <div className="flex space-x-6 text-lg">
+            <Link to="/" className="hover:text-blue-600">Home</Link>
+            <Link to="/projects" className="hover:text-blue-600">Projects</Link>
+            <Link to="/contact" className="hover:text-blue-600">Contact</Link>
+          </div>
+        </nav>
+
+        {/* Page Content */}
         {children}
+
         <ScrollRestoration />
         <Scripts />
       </body>

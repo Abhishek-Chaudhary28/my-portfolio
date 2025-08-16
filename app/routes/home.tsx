@@ -13,7 +13,7 @@ export default function Home() {
         <p className="text-gray-500 mb-1">Hello, I'm</p>
         <h1 className="text-4xl font-bold mb-1">Abhishek Chaudhary</h1>
         <h2 className="text-2xl font-semibold text-gray-600 mb-6">
-          Frontend Developer
+          Photographer | Trader | Python
         </h2>
         <div className="flex space-x-4 mb-6">
           <a
